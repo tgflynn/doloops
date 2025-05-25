@@ -7,7 +7,8 @@ dotimes but accepts multiple variable/count specifications and
 implements a loop that nests them all.
 
 It seems to me that this technique could be useful in reducing
-cyclomatic complexity in software.
+cyclomatic complexity in software, since nested loops are probably
+quite common.
 
 The reason for doing this example implementation in CL is that the
 macro system allows it to be done without modifying the language
@@ -22,3 +23,5 @@ can be implemented in any language that supports arrays and
 higher-order functions.
 
 I have only tested this code with sbcl on Linux.
+
+I'm very interested in all comments on the this idea.
