@@ -9,7 +9,7 @@ implements a loop that nests them all.
 It seems to me that this technique could be useful in reducing
 cyclomatic complexity in software.
 
-The reason for doing this example implmenttation in CL is that the
+The reason for doing this example implementation in CL is that the
 macro system allows it to be done without modifying the language
 itself. 
 
