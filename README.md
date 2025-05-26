@@ -28,8 +28,11 @@ I'm very interested in all comments on the this idea.
 
 The simplest way to test the macro is with:
 
+```
 $ sbcl --script test1.lisp
+
 Expected Output:
+
 i=0 j=0
 i=0 j=1
 i=0 j=2
