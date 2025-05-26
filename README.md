@@ -25,3 +25,35 @@ higher-order functions.
 I have only tested this code with sbcl on Linux.
 
 I'm very interested in all comments on the this idea.
+
+The simplest way to test the macro is with:
+
+$ sbcl --script test1.lisp
+Expected Output:
+i=0 j=0
+i=0 j=1
+i=0 j=2
+i=0 j=3
+i=0 j=4
+i=1 j=0
+i=1 j=1
+i=1 j=2
+i=1 j=3
+i=1 j=4
+i=2 j=0
+i=2 j=1
+i=2 j=2
+i=2 j=3
+i=2 j=4
+i=3 j=0
+i=3 j=1
+i=3 j=2
+i=3 j=3
+i=3 j=4
+i=4 j=0
+i=4 j=1
+i=4 j=2
+i=4 j=3
+i=4 j=4
+
+
