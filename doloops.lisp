@@ -1,7 +1,7 @@
 ;;(require :sb-cltl2)
 
-(defun expand (form)
-  (pprint (sb-cltl2:macroexpand-all form)))
+;;(defun expand (form)
+;;  (pprint (sb-cltl2:macroexpand-all form)))
 
 (defun clamp (val min max)
   (cond

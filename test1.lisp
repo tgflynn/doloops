@@ -1,0 +1,3 @@
+(load "doloops.lisp")
+
+(dotestloops)
