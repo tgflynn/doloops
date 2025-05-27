@@ -1,7 +1,3 @@
-;;(require :sb-cltl2)
-
-;;(defun expand (form)
-;;  (pprint (sb-cltl2:macroexpand-all form)))
 
 (defun clamp (val min max)
   (cond
@@ -70,26 +66,6 @@
            (done)
          (destructuring-bind ,vars (coerce counters 'list)
            ,@body)))))
-
-(defmacro arefl (array arridx)
-  `(apply #'aref (append (list ,array) ,arridx)))
-
-(defmacro alindex (array arridx)
-  `(apply #'array-row-major-index (append (list ,array) ,arridx)))
-
-
-(defun copy-array (a)
-  (declare (optimize (debug 3)))
-  (let* ((adims (array-dimensions a))
-         (aranges (mapcar #'(lambda (x) (list 0 x)) (array-dimensions a)))
-         (acopy (make-array adims
-                            :element-type (array-element-type a))))
-        (doexp aranges #'(lambda (adim)
-                     (let ((arridx (coerce adim 'list)))
-                       (setf (arefl acopy arridx) (arefl a arridx))
-                       )))
-    acopy))
-
 
 (defun dotestloops ()
   (doloops ((i 0 5) (j 0 5))
